@@ -13,6 +13,11 @@
 		AC43190C225A6C1800050834 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC43190A225A6C1800050834 /* Main.storyboard */; };
 		AC43190E225A6C1A00050834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC43190D225A6C1A00050834 /* Assets.xcassets */; };
 		AC431911225A6C1A00050834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC43190F225A6C1A00050834 /* LaunchScreen.storyboard */; };
+		AC67B66B225E74B000FBE158 /* ViewController+SCNPhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC67B66A225E74B000FBE158 /* ViewController+SCNPhysicsContactDelegate.swift */; };
+		AC78ABEA225A8B9000C5FFC8 /* ViewController+ARCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78ABE9225A8B9000C5FFC8 /* ViewController+ARCNViewDelegate.swift */; };
+		AC78ABEC225A8C2600C5FFC8 /* ViewController+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78ABEB225A8C2600C5FFC8 /* ViewController+Methods.swift */; };
+		AC78ABEE225A8F0200C5FFC8 /* ViewController+@IBAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78ABED225A8F0200C5FFC8 /* ViewController+@IBAction.swift */; };
+		AC78ABF0225A9C7800C5FFC8 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC78ABEF225A9C7800C5FFC8 /* Ball.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		AC43190D225A6C1A00050834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC431910225A6C1A00050834 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC431912225A6C1A00050834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC67B66A225E74B000FBE158 /* ViewController+SCNPhysicsContactDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+SCNPhysicsContactDelegate.swift"; sourceTree = "<group>"; };
+		AC78ABE9225A8B9000C5FFC8 /* ViewController+ARCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARCNViewDelegate.swift"; sourceTree = "<group>"; };
+		AC78ABEB225A8C2600C5FFC8 /* ViewController+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Methods.swift"; sourceTree = "<group>"; };
+		AC78ABED225A8F0200C5FFC8 /* ViewController+@IBAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+@IBAction.swift"; sourceTree = "<group>"; };
+		AC78ABEF225A9C7800C5FFC8 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,44 @@
 		AC431903225A6C1800050834 /* BasketBallARKit */ = {
 			isa = PBXGroup;
 			children = (
-				AC431904225A6C1800050834 /* AppDelegate.swift */,
-				AC431906225A6C1800050834 /* art.scnassets */,
-				AC431908225A6C1800050834 /* ViewController.swift */,
-				AC43190A225A6C1800050834 /* Main.storyboard */,
-				AC43190D225A6C1A00050834 /* Assets.xcassets */,
-				AC43190F225A6C1A00050834 /* LaunchScreen.storyboard */,
+				AC78ABE8225A788A00C5FFC8 /* Model */,
+				AC78ABE7225A788300C5FFC8 /* Supporting files */,
+				AC78ABE6225A787700C5FFC8 /* Controllers */,
 				AC431912225A6C1A00050834 /* Info.plist */,
 			);
 			path = BasketBallARKit;
+			sourceTree = "<group>";
+		};
+		AC78ABE6225A787700C5FFC8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC431908225A6C1800050834 /* ViewController.swift */,
+				AC78ABEB225A8C2600C5FFC8 /* ViewController+Methods.swift */,
+				AC78ABE9225A8B9000C5FFC8 /* ViewController+ARCNViewDelegate.swift */,
+				AC67B66A225E74B000FBE158 /* ViewController+SCNPhysicsContactDelegate.swift */,
+				AC78ABED225A8F0200C5FFC8 /* ViewController+@IBAction.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC78ABE7225A788300C5FFC8 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				AC431904225A6C1800050834 /* AppDelegate.swift */,
+				AC431906225A6C1800050834 /* art.scnassets */,
+				AC43190F225A6C1A00050834 /* LaunchScreen.storyboard */,
+				AC43190D225A6C1A00050834 /* Assets.xcassets */,
+				AC43190A225A6C1800050834 /* Main.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		AC78ABE8225A788A00C5FFC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC78ABEF225A9C7800C5FFC8 /* Ball.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC78ABF0225A9C7800C5FFC8 /* Ball.swift in Sources */,
 				AC431909225A6C1800050834 /* ViewController.swift in Sources */,
+				AC78ABEE225A8F0200C5FFC8 /* ViewController+@IBAction.swift in Sources */,
+				AC78ABEC225A8C2600C5FFC8 /* ViewController+Methods.swift in Sources */,
+				AC78ABEA225A8B9000C5FFC8 /* ViewController+ARCNViewDelegate.swift in Sources */,
 				AC431905225A6C1800050834 /* AppDelegate.swift in Sources */,
+				AC67B66B225E74B000FBE158 /* ViewController+SCNPhysicsContactDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,17 +330,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7SHMN27XP;
 				INFOPLIST_FILE = BasketBallARKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.gukov.BasketBallARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,17 +351,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z7SHMN27XP;
 				INFOPLIST_FILE = BasketBallARKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ru.gukov.BasketBallARKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
